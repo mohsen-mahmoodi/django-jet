@@ -1,0 +1,20 @@
+@import "../globals";
+
+/* LOGIN FORM */
+
+body.login {
+
+  #header {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .form-row {
+    float: right;
+
+    label {
+      padding-left: 0.5em;
+      padding-right: 0;
+
+    }
+  }
+}

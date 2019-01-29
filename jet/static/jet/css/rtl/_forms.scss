@@ -1,0 +1,22 @@
+@import "../globals";
+
+/* FORM BUTTONS */
+
+.button, input[type="submit"], input[type="button"], .object-tools a {
+  &.default {
+    margin: 0 0 0 8px;
+  }
+}
+
+.segmented-button {
+
+  &.left {
+    border-radius: 0 4px 4px 0;
+  }
+
+  &.right {
+    border-radius: 4px 0 0 4px;
+  }
+}
+
+/* SELECTOR */

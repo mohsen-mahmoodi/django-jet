@@ -1,0 +1,144 @@
+@import "../globals";
+
+/* DASHBOARD */
+
+.dashboard {
+  .module {
+    table {
+      td {
+        a {
+          padding-left: .6em;
+          padding-right: auto;
+        }
+      }
+    }
+  }
+}
+
+/* RECENT ACTIONS MODULE */
+
+/* JET DASHBOARD */
+
+.dashboard {
+  &-tools {
+    left: 20px + 175px + 20px;
+    right: 0;
+
+    &-toggle {
+      &-container {
+        text-align: left;
+      }
+    }
+  }
+
+  &-column {
+    margin-right: 10px;
+    margin-left: 0;
+    
+    @include for-mobile {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    &-wrapper {
+      float: right;
+    }
+
+    &.first {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  &-item {
+    &-header {
+      padding: 0 6px 0 10px;
+
+      &-drag {
+        float: left;
+        margin-right: 10px;
+        margin-left: 0;
+      }
+
+      &-buttons {
+        float: left;
+        margin-right: 10px;
+        margin-left: 0;
+      }
+    }
+
+    &-content {
+      ul:not(.inline) {
+        li {
+
+          .float-right {
+            float: right;
+          }
+        }
+      }
+
+      ul.inline {
+        li {
+          margin-right: 10px;
+          margin-left: 0;
+
+          &:first-child {
+            margin-right: 0;
+            margin-left: auto;
+          }
+
+        }
+
+        &.bordered li {
+          border-right: 1px solid $content-border2-color;
+          border-left: none;
+          margin-right: 0;
+          margin-left: auto;
+          padding: 0 10px;
+
+          &:first-child {
+            border-right: 0;
+            border-left: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.add-dashboard {
+  + .select2 {
+
+    .select2-selection {
+      border-radius: 4px 4px 0 0 !important;
+    }
+  }
+
+  &-link {
+    @include for-mobile {
+      margin-right: 6px;
+      margin-left: 5px;
+    }
+
+    @include for-phone {
+      margin-right: 0;
+      margin-left:auto;
+    }
+
+    &-label {
+      margin-right: 4px;
+      margin-left: 0;
+    }
+  }
+}
+
+.reset-dashboard-link {
+  @include for-mobile {
+    float: left;
+  }
+
+  &-label {
+    margin-right: 6px;
+    margin-left: 0;
+  }
+}

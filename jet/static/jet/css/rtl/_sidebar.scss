@@ -1,0 +1,118 @@
+@import "../globals";
+
+.sidebar {
+
+  right: 0;
+  left: auto;
+  transform: translate3d(100%, 0, 0);  
+  
+  &.sidebar-opened {
+    @include for-mobile {
+      box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &-header {
+    
+    &.sidebar-opened {
+      @include for-mobile {
+        transform: translate3d(-360px, 0, 0);
+      }
+
+      @include for-phone {
+        transform: translate3d(-80%, 0, 0);
+      }
+    }
+
+    &-menu {
+      &, &:visited, &:hover {
+        border-left: 1px solid $sidebar-contrast-background-color;
+        border-right: 0;
+      }
+    }
+  }
+
+  &-close {
+    float: left;
+    margin: 12px 12px 0 18px;
+  }
+
+  &-title {
+    padding: 0 24px 0 14px;
+
+    @include for-mobile {
+      padding: 12px 30px 12px 18px;
+
+      html.touchevents & {
+        padding-right: 20px;
+        padding-left: 0;
+      }
+    }
+
+  }
+
+  &-link {
+    &, &:visited, &:hover {
+      padding: 8px 20px 8px 12px;
+
+      @include for-mobile {
+        padding: 12px 30px 12px 18px;
+
+        html.touchevents & {
+          padding-right: 20px;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &-icon {
+      margin-left: 6px;
+      margin-right: 0;
+    }
+
+    &-label {
+      html.touchevents .editing & {
+        transform: translate3d(-20px, 0, 0);
+      }
+    }
+
+  }
+
+  &-left {
+    position: absolute;
+    right: 4px;
+    left: auto;
+
+  }
+
+  &-right {
+    float: left;
+    margin-right: 10px;
+  }
+
+  &-popup {
+    right: 0;
+    left: auto;
+
+    &-title {
+      @include for-mobile {
+        padding: 24px 20px 24px 0;
+      }
+    }
+
+    &-container {
+      right: $sidebar-width;
+      left: 0;
+
+      @include for-mobile {
+        right: 0;
+      }
+    }
+
+  }
+
+  &-container-toggle {
+    float: right;
+    padding: 10px 20px 10px 0;
+  }
+}

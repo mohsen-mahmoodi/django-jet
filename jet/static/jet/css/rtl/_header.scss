@@ -1,0 +1,68 @@
+@import "../globals";
+
+/* HEADER */
+
+#branding {
+  padding: 14px 36px 14px 32px;
+
+  &-pin {
+    left: 4px;
+    right: auto;
+  }
+
+  &-menu {
+    right: 20px;
+    left: auto;
+  }
+}
+
+.user-tools {
+  ul {
+    left: 20px;
+    right: auto;
+    
+    @include for-mobile {
+      left: 0;
+      right: auto;
+      border-right: 1px solid $sidebar-contrast-background-color;
+      border-left: 0;
+    }
+
+    &.opened {
+
+      @include for-mobile {
+        border-radius: 0  4px 0 0;
+      }
+    }
+
+    li.user-tools-welcome-msg {
+
+      @include for-mobile {
+        padding-right: 18px;
+        padding-left: 0;
+      }
+
+      &:before {
+        margin-right: 5px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-theme-link {
+    margin: 0 0 5px 5px;
+
+    @include for-mobile {
+      margin: 0 8px 8px 8px;
+    }
+
+    &:last-child {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    &.selected {
+      box-shadow: 0 1px 1px 0 $top-dropdown-selected-color;
+    }
+  }
+}

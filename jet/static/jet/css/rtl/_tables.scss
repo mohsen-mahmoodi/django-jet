@@ -1,0 +1,78 @@
+@import "../globals";
+
+
+/* TABLES */
+
+table {
+
+  &.helper {
+    body.menu-pinned & {
+      right: $sidebar-width + 20px;
+      left: 0;
+    }
+
+    body.menu-pinned.popup & {
+      right: 20px;
+      left: auto;
+    }
+  }
+}
+
+th {
+  text-align: right;
+}
+
+thead th,
+tfoot td {
+  text-align: right;
+
+  &:first-child {
+    border-radius: 0 4px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 4px 0 0 0;
+  }
+
+  &:first-child:last-child {
+    border-radius: 0 4px 0 4px;
+  }
+}
+
+/* SORTABLE TABLES */
+
+table {
+  thead th {
+    &.sorted {
+      padding-left: 32px;
+      padding-right: 0;
+
+      .sortoptions {
+
+        a {
+          &.sortremove {
+            left: 18px;
+            right: auto;
+          }
+
+          &.ascending {
+            left: 4px;
+            right: auto;
+          }
+
+          &.descending {
+            left: 4px;
+            right: 0;
+          }
+        }
+      }
+
+      .sortpriority {
+        margin-left: 2px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* OBJECT HISTORY */

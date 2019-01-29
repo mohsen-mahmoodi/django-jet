@@ -1,0 +1,20 @@
+@import "../globals";
+
+/* MODULES */
+
+.module {
+  blockquote {
+    margin-right: 12px;
+    margin-left: 0;
+  }
+
+  ul, .ol {
+    margin-right: 1.5em;
+    margin-left: 0;
+  }
+
+}
+
+.module h2, .module caption, .inline-group h2 {
+  text-align: right;
+}

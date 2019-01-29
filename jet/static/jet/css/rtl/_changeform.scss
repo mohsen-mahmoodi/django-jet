@@ -1,0 +1,361 @@
+@import "../globals";
+
+/* FORM ROWS */
+
+.form-row {
+
+  p {
+    padding-right: 0;
+    padding-left: auto;
+  }
+
+}
+
+/* FORM LABELS */
+
+/* RADIO BUTTONS */
+
+form {
+  ul.radiolist {
+    input[type="radio"] {
+      margin: -2px 0 0 4px;
+    }
+  }
+
+  ul.inline {
+    margin-right: 0;
+    margin-left: auto;
+
+    li {
+      float: right;
+      padding-left: 7px;
+      padding-right: 0;
+    }
+  }
+}
+
+/* ALIGNED FIELDSETS */
+
+.aligned {
+  label {
+    padding: 8px 0 0 10px;
+    float: right;
+
+    @include for-mobile {
+      padding: 0 2px 0 0;
+      float: none;
+    }
+  }
+
+  label + p {
+    margin-right: 170px;
+    margin-left: 0;
+
+    @include for-mobile {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+}
+
+form .aligned {
+  ul {
+    margin-right: 160px;
+    padding-right: 10px;
+    margin-left: 0;
+    padding-left: 0;
+
+    @include for-mobile {
+      margin-right: 0;
+      padding-right: 0;
+      margin-left: auto;
+      padding-left: auto;
+    }
+  }
+
+  p.help {
+    clear: right;
+    margin-right: 160px;
+    padding-right: 10px;
+    margin-left: 0;
+    padding-left: 0;
+    
+
+    @include for-mobile {
+      margin-right: 0;
+      padding-right: 0;
+      margin-left: auto;
+      padding-left: auto;
+    }
+  }
+
+  label + p.help {
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: auto;
+    padding-left: auto;
+  }
+
+  input + p.help,
+  textarea + p.help,
+  select + p.help {
+    margin-right: 160px;
+    padding-right: 10px;
+    margin-left: 0;
+    padding-left: 0;
+
+    @include for-mobile {
+      margin-right: 0;
+      padding-right: 0;
+      margin-left: auto;
+      padding-left: auto;
+    }
+  }
+
+  table p {
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: auto;
+    padding-left: auto;
+  }
+}
+
+.checkbox-row p.help {
+  margin-right: 0;
+  padding-right: 0;
+  margin-left: auto;
+  padding-left: auto;
+}
+
+/* FIELDSETS */
+
+fieldset {
+  .field-box {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+}
+
+/* WIDE FIELDSETS */
+
+form .wide p, form .wide input + p.help {
+  margin-right: 200px;
+  margin-left: 0;
+
+  @include for-mobile {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+form .wide p.help {
+  padding-right: 38px;
+  padding-left: 0;
+
+  @include for-mobile {
+    padding-right: 0;
+    padding-left: auto;
+  }
+}
+
+/* MONOSPACE TEXTAREAS */
+
+/* SUBMIT ROW */
+
+.submit-row {
+
+  input {
+    &, &:visited, &:hover {
+      margin: 0 0 5px  5px;
+    }
+
+    &.default {
+      margin: 0 0 5px  8px;
+    }
+  }
+
+  p.deletelink-box {
+    float: left;
+    margin: 0 0 5px 5px;
+    
+    @include for-phone {
+      display: block;
+      margin: 0 0 8px 0;
+      float: none;
+    }
+  }
+
+}
+
+/* CUSTOM FORM FIELDS */
+
+.vDateField, .vTimeField {
+  margin-left: 2px;
+  border-radius: 4px 4px 0 0 !important;
+  border-left-width: 0 !important;
+
+  margin-right: 0;
+  border-radius: 4px 4px 0 0 !important;
+  border-right-width: auto !important;
+
+  .results & {
+    border-left-width: 0 !important;
+    border-right-width: auto !important;
+
+  }
+
+  @include for-width(374px) {
+    border-left-width: 1px !important;
+    border-right-width: auto !important;
+  }
+
+  &-link {
+
+    span {
+      border-radius: 0 0 4px 4px;
+    }
+  }
+}
+
+.vDateField-link + .vTimeField {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+/* INLINES */
+
+.inline-related {
+
+  h3 {
+
+    > b {
+      margin-right: 10px;
+      margin-left: 0;
+    }
+
+    .inline_label {
+      margin-left: 10px;
+      margin-right: 0;
+
+      ~ .inlinechangelink, ~ .inlineviewlink {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+    }
+
+    span.delete, .inline-deletelink {
+      float: left;
+      margin-right: 10px;
+      margin-left: 0;
+
+      @include for-mobile {
+        margin-right: 0;
+        margin-left: auto;
+      }
+
+    }
+  }
+}
+
+.inline-navigation {
+  right: 0;
+  left: auto;
+
+  @include for-mobile {
+    right: auto;
+  }
+
+  &-item {
+    &, &:visited, &:hover {
+      padding: 8px 20px 8px 10px;
+    }
+  }
+}
+
+.inline-group {
+  .tabular {
+    td.original {
+      padding-left: 0;
+      padding-right: auto;
+
+    }
+  }
+
+  .compact {
+    margin-right: 200px;
+    margin-left: 0;
+
+    @include for-mobile {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  ul.tools a.add, div.add-row a, .tabular tr.add-row td a {
+    &:before {
+      margin-left: 4px;
+      margin-right: 0;
+    }
+  }
+}
+
+/* RELATED FIELD ADD ONE / LOOKUP */
+
+form .related-widget-wrapper ul {
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: auto;
+    padding-left: auto;
+}
+
+.changeform-navigation {
+  float: right;
+
+  @include for-mobile {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+
+  &-button {
+
+    &-icon {
+      &.left {
+        float: right;
+      }
+
+      &.right {
+        float: left;
+      }
+    }
+
+    &-icon.left + &-label {
+      margin-right: 16px;
+      margin-left: 16px;
+    }
+
+    &-icon.right + &-label {
+      margin-left: 16px;
+      margin-right: 0;
+    }
+  }
+}
+
+.related-lookup {
+  margin-right: 6px;
+  margin-left: 0;
+}
+
+/* TABS */
+
+.changeform-tabs {
+
+  &-item {
+    a, a:hover, a:visited {
+      @include for-mobile {
+        margin: 0 0 5px 5px;
+      }
+    }
+  }
+}

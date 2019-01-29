@@ -1,0 +1,104 @@
+@import "../globals";
+
+// body overrides
+
+/* PAGE STRUCTURE */
+
+#container {
+  transition: padding-left 0s;
+  transition: padding-right 0.3s;
+
+  body.menu-pinned & {
+    padding-left: 0;
+    padding-right: $sidebar-width;
+  }
+
+  body.menu-pinned.popup & {
+    padding-left: autu;
+    padding-right: 0;
+  }
+
+  @include for-mobile {
+    &, body.menu-pinned & {
+      padding-left: auto;
+      padding-right: 0;
+    }
+  }
+
+  .popup & {
+    padding-left: auto;
+    padding-right: 0;
+  }
+}
+
+#content-main {
+  float: right;
+}
+
+#content-related {
+  float: left;
+  margin-right: 0;
+  margin-left: -300px;
+
+  @include for-mobile {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+/* COLUMN TYPES */
+
+.colMS {
+  margin-left: 300px;
+  margin-right: 0;
+
+  @include for-mobile {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.colSM {
+  margin-right: 300px;
+  margin-left: 0;
+
+  @include for-mobile {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.colSM #content-related {
+  float: right;
+  margin-right: -300px;
+  margin-left: 0;
+
+  @include for-mobile {
+    float: none;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.colSM #content-main {
+  float: left;
+}
+
+// @import "jquery-ui/jquery-ui.theme";
+// @import "select2/layout";
+@import "content";
+@import "forms";
+@import "tables";
+@import "messages";
+@import "header";
+@import "breadcrumbs";
+@import "modules";
+@import "object-tools";
+@import "changeform";
+@import "changelist";
+@import "sidebar";
+@import "relatedpopup";
+@import "dashboard";
+@import "delete-confirmation";
+@import "login";
+@import "misc";

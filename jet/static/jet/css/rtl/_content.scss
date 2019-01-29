@@ -1,0 +1,75 @@
+@import "../globals";
+
+
+/* LINKS */
+
+/* GLOBAL DEFAULTS */
+
+dd {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+blockquote {
+  margin-right: 2px;
+  margin-left: 0;
+  padding-right: 10px;
+  padding-left: 0;
+  border-right: 5px solid #ddd;
+  border-left: none;
+}
+
+/* TEXT STYLES & MODIFIERS */
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* ACTION ICONS */
+
+.addlink {
+
+  &:before {
+    margin-left: 4px;
+    margin-right: auto;
+  }
+}
+
+.changelink, .inlinechangelink {
+
+  &:before {
+    margin-left: 4px;
+    margin-right: 0;
+  }
+}
+
+.deletelink {
+  &:before {
+    margin-left: 4px;
+    margin-right: 0;
+  }
+}
+
+.inlineviewlink {
+
+  &:before {
+    margin-left: 4px;
+    margin-right: 0;
+  }
+}
+
+/* BOOLEAN ICONS */
+
+/* LOADING INDOCATOR */

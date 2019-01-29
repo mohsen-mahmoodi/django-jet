@@ -23,6 +23,7 @@ Themes.prototype = {
 
             var cssToLoad = [
                 { url: $link.data('base-stylesheet'), class: 'base-stylesheet' },
+                { url: $link.data('rtl-stylesheet'), class: 'jquery-ui-stylesheet' },
                 { url: $link.data('select2-stylesheet'), class: 'select2-stylesheet' },
                 { url: $link.data('jquery-ui-stylesheet'), class: 'jquery-ui-stylesheet' }
             ];

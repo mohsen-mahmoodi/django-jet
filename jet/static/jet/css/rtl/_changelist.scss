@@ -1,0 +1,178 @@
+@import "../globals";
+
+/* CHANGELISTS */
+
+#changelist {
+
+  .results {
+    @include for-mobile {
+      right: -20px;
+      left: 0;
+    }
+
+    @include for-phone {
+      right: -10px;
+      left: 0;
+    }
+  }
+
+  .paginator {
+    text-align: left;
+
+    @include for-mobile {
+      text-align: right;
+    }
+
+    @include for-phone {
+      text-align: center;
+    }
+  }
+}
+
+.change-list {
+
+  .filtered table {
+    border-right: none;
+  }
+
+  .filtered table tbody th {
+    padding-left: 1em;
+    padding-right: 0;
+  }
+}
+
+/* CHANGELIST TABLES */
+
+/* TOOLBAR */
+
+#toolbar {
+  form {
+
+    #searchbar {
+      margin-left: 2px;
+      margin-right: 0;
+
+      @include for-mobile {
+        margin-left: 5px;
+        margin-right: 0;
+      }
+
+    }
+
+  }
+}
+
+.changelist-filter-select {
+  &-wrapper {
+    margin-left: 2px;
+    margin-right: 0;
+
+    @include for-mobile {
+      margin-left: 5px;
+      margin-right: 0;
+    }
+
+    .select2 {
+      &-selection--multiple {
+        .select2-selection__choice {
+          margin-left: 2px !important;
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+/* FILTER COLUMN */
+
+/* DATE DRILLDOWN */
+
+.change-list ul.toplinks {
+
+  li {
+    margin: 0 0 5px 5px;
+  }
+
+}
+
+/* PAGINATOR */
+
+.paginator {
+  .pages-wrapper {
+    margin-right: 10px;
+    margin-left: 0;
+    
+
+    @include for-mobile {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    span, a {
+
+      &:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 4px 4px;
+      }
+
+    }
+
+  }
+
+  input[type="submit"] {
+    &, &:hover, &:focus {
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+/* ACTIONS */
+
+#changelist {
+  .actions {
+    float: right;
+
+    @include for-mobile{
+      float: none;
+    }
+
+    span.clear {
+      margin-right: 5px;
+      margin-left: 0;
+    }
+
+    .button {
+      &, &:visited, &:hover {
+        margin: 0 0 5px 8px;
+      }
+
+    }
+
+  }
+}
+
+.changelist-footer {
+
+  &.fixed {
+    transition: left 0.3s;
+
+    body.menu-pinned & {
+      right: $sidebar-width + 20px;
+      left: auto
+    }
+
+    body.menu-pinned.popup & {
+      right: 20px;
+      left: 0;
+    }
+
+  }
+
+  &.popup {
+    right: 20px;
+    left: 0;
+  }
+}

@@ -1,0 +1,37 @@
+.icon-arrow-left:before {
+    content: "\e60b";
+}
+
+
+//TODO: _content.scss line 22 I don;t changed it
+/* TEXT STYLES & MODIFIERS */
+
+.float-right {
+    float: right;
+  }
+  
+  .float-left {
+    float: left;
+  }
+  
+  .align-left {
+    text-align: left;
+  }
+  
+  .align-right {
+    text-align: right;
+  }
+
+
+  //TODO: _content.scss line 70
+
+  &-content {
+    ul:not(.inline) {
+      li {
+
+        .float-right {
+          float: right;
+        }
+      }
+    }
+  }

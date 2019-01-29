@@ -16,7 +16,10 @@
 <link rel="stylesheet" type="text/css" href="{% static "jet/css/themes/"|add:THEME|add:"/jquery-ui.theme.css" as url %}{{ url|jet_append_version }}" class="jquery-ui-stylesheet" />
 
 {% block extrastyle %}{% endblock %}
-{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />{% endif %}
+{% if LANGUAGE_BIDI %}
+<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />
+<link rel="stylesheet" type="text/css" href="{% static "jet/css/rtl/base.css" as url %}{{ url|jet_append_version }}" class="base-stylesheet" />
+{% endif %}
 {% jet_get_date_format as date_format %}
 {% jet_get_time_format as time_format %}
 {% jet_get_datetime_format as datetime_format %}
@@ -203,7 +206,7 @@
                                 <div class="sidebar-section">
                                     <div class="sidebar-title">
                                         <a{% if app.url %} href="{{ app.url }}"{% endif %} class="sidebar-title-link"{% if app.url_blank %} target="_blank"{% endif %}>
-                                            {{ app.label }}
+                                            {{ app.label }} محسن محمودی
                                         </a>
                                     </div>
                                     {% for model in app.items %}
@@ -383,9 +386,13 @@
                                data-base-stylesheet="{% static "jet/css/themes/"|add:conf_theme.theme|add:"/base.css" %}?v={{ JET_VERSION }}"
                                data-select2-stylesheet="{% static "jet/css/themes/"|add:conf_theme.theme|add:"/select2.theme.css" %}?v={{ JET_VERSION }}"
                                data-jquery-ui-stylesheet="{% static "jet/css/themes/"|add:conf_theme.theme|add:"/jquery-ui.theme.css" %}?v={{ JET_VERSION }}"
+                                {% if LANGUAGE_BIDI %}
+                                    data-rtl-stylesheet="{% static "jet/css/rtl/base.css" %}?v={{ JET_VERSION }}"
+                                {% else %}
+                                    data-rtl-stylesheet=""
+                                {% endif %}
                                {% if conf_theme.title %} title="{{ conf_theme.title }}"{% endif %}
-                               style="background-color: {{ conf_theme.color|default:"white" }};"
-                                    ></a>
+                               style="background-color: {{ conf_theme.color|default:"white" }};"></a>
                         {% endif %}
                     {% endfor %}
                 {% endspaceless %}

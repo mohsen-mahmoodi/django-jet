@@ -1,0 +1,10 @@
+@import "../globals";
+
+/* MESSAGES & ERRORS */
+
+.form-row.errors {
+  ul.errorlist li {
+    padding-right: 0;
+    padding-left: auto;
+  }
+}

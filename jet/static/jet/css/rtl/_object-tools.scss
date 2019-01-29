@@ -1,0 +1,37 @@
+@import "../globals";
+
+
+/* OBJECT TOOLS */
+
+.object-tools {
+  text-align: left;
+
+  @include for-mobile {
+    text-align: right;
+  }
+
+  .form-row & {
+    padding-right: 3.5em;
+    padding-left: 0;
+  }
+
+  li {
+    margin-right: 5px;
+    margin-left: 0;
+    @include for-mobile {
+      margin-left: 5px;
+      margin-right: 0;
+    }
+  }
+
+  body.change-list & {
+    float: none;
+  }
+
+  a.addlink {
+    &:before {
+      margin-left: 3px;
+      margin-right: 0;
+    }
+  }
+}
